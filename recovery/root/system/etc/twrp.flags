@@ -1,0 +1,57 @@
+# mount point        fstype   device                                flags
+
+# Dynamic / Super partitions
+/system              ext4     /dev/block/mapper/system      flags=ro,backup=1,display="System"
+/vendor              ext4     /dev/block/mapper/vendor      flags=ro,backup=1,display="Vendor"
+/product             ext4     /dev/block/mapper/product     flags=ro,backup=1,display="Product"
+/odm                 ext4     /dev/block/mapper/odm         flags=ro,backup=1,display="ODM"
+/oem                 ext4     /dev/block/mapper/oem         flags=ro,backup=1,display="OEM"
+
+# Userdata & cache
+/cache               ext4     /dev/block/by-name/cache      flags=wipeingui,backup=1,display="Cache"
+
+# Boot / AVB
+/boot                emmc     /dev/block/by-name/boot       flags=flashimg=1,backup=1,display="Boot"
+/boot2               emmc     /dev/block/by-name/boot2      flags=flashimg=1,backup=1,display="Boot2"
+/dtbo                emmc     /dev/block/by-name/dtbo       flags=flashimg=1,backup=1,display="DTBO"
+/vbmeta              emmc     /dev/block/by-name/vbmeta            flags=flashimg=1,backup=1,display="VBMeta"
+/vbmeta_system       emmc     /dev/block/by-name/vbmeta_system     flags=flashimg=1,backup=1,display="VBMeta System"
+/vbmeta_vendor       emmc     /dev/block/by-name/vbmeta_vendor     flags=flashimg=1,backup=1,display="VBMeta Vendor"
+
+# Recovery
+/recovery            emmc     /dev/block/by-name/recovery   flags=flashimg=1,backup=1,display="Recovery"
+/recovery2           emmc     /dev/block/by-name/recovery2  flags=flashimg=1,backup=1,display="Recovery2"
+
+# Persistent / calibration
+/persist             ext4     /dev/block/by-name/persist    flags=backup=1,display="Persist"
+/frp                 emmc     /dev/block/by-name/frp        flags=backup=1,display="FRP"
+/logo                emmc     /dev/block/by-name/logo       flags=flashimg=1,backup=1,display="Logo"
+
+# Radio / NV
+/nvram               emmc     /dev/block/by-name/nvram      flags=backup=1,display="NVRAM"
+/nvdata              ext4     /dev/block/by-name/nvdata     flags=backup=1,display="NVDATA"
+/nvcfg               ext4     /dev/block/by-name/nvcfg      flags=backup=1,display="NVCFG"
+/protect1            emmc     /dev/block/by-name/protect1   flags=backup=1,display="Protect1"
+/protect2            emmc     /dev/block/by-name/protect2   flags=backup=1,display="Protect2"
+/expdb               emmc     /dev/block/by-name/expdb      flags=backup=1,display="EXPDB"
+
+# Bootloader / security
+/lk                  emmc     /dev/block/by-name/lk         flags=flashimg=1,backup=1,display="LK"
+/lk2                 emmc     /dev/block/by-name/lk2        flags=flashimg=1,backup=1,display="LK2"
+/sec1                emmc     /dev/block/by-name/sec1       flags=backup=1,display="SEC1"
+/seccfg              emmc     /dev/block/by-name/seccfg     flags=backup=1,display="SECCFG"
+/efuse               emmc     /dev/block/by-name/efuse      flags=backup=1,display="EFUSE"
+/otp                 emmc     /dev/block/by-name/otp        flags=backup=1,display="OTP"
+
+# MediaTek firmware
+/md1img              emmc     /dev/block/by-name/md1img     flags=backup=1,display="MD1IMG"
+/md_udc              emmc     /dev/block/by-name/md_udc     flags=backup=1,display="MD_UDC"
+/scp1                emmc     /dev/block/by-name/scp1       flags=backup=1,display="SCP1"
+/scp2                emmc     /dev/block/by-name/scp2       flags=backup=1,display="SCP2"
+/sspm_1              emmc     /dev/block/by-name/sspm_1     flags=backup=1,display="SSPM_1"
+/sspm_2              emmc     /dev/block/by-name/sspm_2     flags=backup=1,display="SSPM_2"
+/spmfw               emmc     /dev/block/by-name/spmfw      flags=backup=1,display="SPMFW"
+/gz1                 emmc     /dev/block/by-name/gz1        flags=backup=1,display="GZ1"
+/gz2                 emmc     /dev/block/by-name/gz2        flags=backup=1,display="GZ2"
+/tee1                emmc     /dev/block/by-name/tee1       flags=backup=1,display="TEE1"
+/tee2                emmc     /dev/block/by-name/tee2       flags=backup=1,display="TEE2"
