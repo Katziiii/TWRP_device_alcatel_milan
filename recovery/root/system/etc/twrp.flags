@@ -1,11 +1,11 @@
 # mount point        fstype   device                                flags
 
 # Dynamic / Super partitions
-/system              ext4     /dev/block/mapper/system      flags=ro,backup=1,display="System"
-/vendor              ext4     /dev/block/mapper/vendor      flags=ro,backup=1,display="Vendor"
-/product             ext4     /dev/block/mapper/product     flags=ro,backup=1,display="Product"
-/odm                 ext4     /dev/block/mapper/odm         flags=ro,backup=1,display="ODM"
-/oem                 ext4     /dev/block/mapper/oem         flags=ro,backup=1,display="OEM"
+/system              ext4     /dev/block/mapper/system      flags=backup=1,display="System"
+/vendor              ext4     /dev/block/mapper/vendor      flags=backup=1,display="Vendor"
+/product             ext4     /dev/block/mapper/product     flags=backup=1,display="Product"
+/odm                 ext4     /dev/block/mapper/odm         flags=backup=1,display="ODM"
+/oem                 ext4     /dev/block/mapper/oem         flags=backup=1,display="OEM"
 
 # Userdata & cache
 /cache               ext4     /dev/block/by-name/cache      flags=wipeingui,backup=1,display="Cache"
